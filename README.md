@@ -1,5 +1,6 @@
 # luxtools
 
+> sqlite + vue3 + typescript
 ## Project setup
 ```
 npm install
