@@ -26,7 +26,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/jf",
     name: "JFChange",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/jfchange/index.vue"),
+      import(/* webpackChunkName: "about" */ "../views/jfChange/index.vue"),
   },
 ];
 

@@ -1,7 +1,7 @@
 <template>
   <n-card title="简繁转换">
     <n-input
-      v-model="textValue"
+      v-model:value="textValue"
       type="textarea"
       placeholder="自动调整尺寸"
       :autosize="{
@@ -17,7 +17,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { NButton, NInput, NCard, useMessage } from "naive-ui";
+import { NButton, NInput, NCard } from "naive-ui";
 
 export default defineComponent({
   name: "JFChange",
@@ -33,19 +33,19 @@ export default defineComponent({
   },
   methods: {
     jfHandleClick() {
-      this.$data.textValue = this.traditionalized(this.$data.textValue);
-      useMessage().info("简化繁完成！");
+      this.textValue = this.traditionalized(this.textValue);
+      // message.warning("简化繁完成！");
     },
     fjHandleClick() {
-      this.$data.textValue = this.simplized(this.$data.textValue);
-      useMessage().info("繁化简完成！");
+      this.textValue = this.simplized(this.textValue);
+      // useMessage().info("繁化简完成！");
     },
     /**
      * 繁体转简体
      * @param text
      */
     simplized(text: string): string {
-      let str: string = "";
+      let str = "";
       for (let i = 0; i < text.length; i++) {
         if (this.ftPYStr().indexOf(text.charAt(i)) != -1)
           str += this.charPYStr().charAt(
@@ -64,7 +64,7 @@ export default defineComponent({
      * @param text
      */
     traditionalized(text: string): string {
-      let str: string = "";
+      let str = "";
       for (let i = 0; i < text.length; i++) {
         if (this.charPYStr().indexOf(text.charAt(i)) != -1)
           str += this.ftPYStr().charAt(

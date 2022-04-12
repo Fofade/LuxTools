@@ -1,7 +1,20 @@
 <template>
+  <n-message-provider>
+    <MessageApi />
+  </n-message-provider>
   <router-view />
 </template>
-
+<script>
+import MessageApi from "@/components/Notifycation/MessageApi.vue";
+import { NMessageProvider } from "naive-ui";
+export default {
+  components: {
+    MessageApi,
+    NMessageProvider,
+  },
+  name: "App",
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
