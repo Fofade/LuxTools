@@ -2,14 +2,18 @@
   <div></div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script>
+import { defineComponent, getCurrentInstance } from "vue";
 import { useMessage } from "naive-ui";
 
 export default defineComponent({
   name: "MessageApi",
   setup() {
-    window.$message = useMessage();
+    const ctx = getCurrentInstance();
+    if (ctx) {
+      const message = useMessage();
+      ctx.appContext.config.globalProperties.$message = message;
+    }
   },
 });
 </script>

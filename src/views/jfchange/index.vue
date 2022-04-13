@@ -34,11 +34,11 @@ export default defineComponent({
   methods: {
     jfHandleClick() {
       this.textValue = this.traditionalized(this.textValue);
-      // message.warning("简化繁完成！");
+      this.$message.warning("简化繁完成！");
     },
     fjHandleClick() {
       this.textValue = this.simplized(this.textValue);
-      // useMessage().info("繁化简完成！");
+      this.$message.info("繁化简完成！");
     },
     /**
      * 繁体转简体
