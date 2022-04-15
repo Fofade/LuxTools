@@ -10,23 +10,34 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/about",
     name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+
+    component: () => import("../views/Author/About/AboutView.vue"),
   },
   {
     path: "/lcs",
     name: "Lcs",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/lcs_parser/index.vue"),
+    component: () => import("../views/Tools/LcsParser/LcsParser.vue"),
   },
   {
     path: "/jf",
     name: "JFChange",
+    component: () => import("../views/Tools/JFTrans/JFChange.vue"),
+  },
+  {
+    path: "/editor",
+    name: "LuxEditor",
+    component: () => import("../views/Tools/Editor/LuxEditor.vue"),
+  },
+  {
+    path: "/nes",
+    name: "NesG",
+    component: () => import("../views/Tools/Nes/NesGame.vue"),
+  },
+  {
+    path: "/404",
+    name: "404PageNotFound",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/jfChange/index.vue"),
+      import(/* webpackChunkName: "about" */ "../views/DashBoard/404/404.vue"),
   },
 ];
 

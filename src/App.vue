@@ -5,8 +5,9 @@
   <router-view />
 </template>
 <script>
-import MessageApi from "@/components/Notifycation/MessageApi.vue";
+import MessageApi from "@/components/MessageApi/MessageApi.vue";
 import { NMessageProvider } from "naive-ui";
+
 export default {
   components: {
     MessageApi,
@@ -15,9 +16,10 @@ export default {
   name: "App",
 };
 </script>
-<style>
+<style lang="scss">
+@import "@/assets/styles/MyFont.css";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "tt";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

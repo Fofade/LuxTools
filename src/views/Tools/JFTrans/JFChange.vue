@@ -18,6 +18,11 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { NButton, NInput, NCard } from "naive-ui";
+import "@/components/MessageApi/Message";
+import {
+  MsgInfoHandler,
+  MsgSuccessHandler,
+} from "@/components/MessageApi/Message";
 
 export default defineComponent({
   name: "JFChange",
@@ -34,11 +39,11 @@ export default defineComponent({
   methods: {
     jfHandleClick() {
       this.textValue = this.traditionalized(this.textValue);
-      this.$message.warning("简化繁完成！");
+      MsgInfoHandler("简化繁完成！");
     },
     fjHandleClick() {
       this.textValue = this.simplized(this.textValue);
-      this.$message.info("繁化简完成！");
+      MsgSuccessHandler("繁化简完成！");
     },
     /**
      * 繁体转简体
