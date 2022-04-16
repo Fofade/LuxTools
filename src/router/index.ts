@@ -24,6 +24,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import("../views/Tools/JFTrans/JFChange.vue"),
   },
   {
+    path: "/sql",
+    name: "ValueFormat",
+    component: () => import("../views/Tools/ValueFormat/ValueFormat.vue"),
+  },
+  {
     path: "/editor",
     name: "LuxEditor",
     component: () => import("../views/Tools/Editor/LuxEditor.vue"),

@@ -18,7 +18,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { NButton, NInput, NCard } from "naive-ui";
-import "@/components/MessageApi/Message";
 import {
   MsgInfoHandler,
   MsgSuccessHandler,
